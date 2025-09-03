@@ -17,11 +17,11 @@ when u run it u get:
 ## ⚡ usage
 1. edit [`offsets.hpp`](offsets.hpp) → set ur **placeId**  
    ```cpp
-   inline constexpr uintptr_t PLACE_ID = 168556275; // ur place here ```
+   inline constexpr uintptr_t PLACE_ID = 168556275; // ur place here 
     
-2. run `build.bat` → it’ll call **g++** (mingw) n spit out `offset-dumper.exe`
+2. run `build.bat` → it’ll call **g++** (mingw) n spit out `dumper.exe`
 3. open **roblox** (make sure ur target exp is up)
-4. run `offset-dumper.exe` → check `/output` folder for ur loot
+4. run `dumper.exe` → check `/output` folder for ur loot
 
 ## 🔧 deps
 
