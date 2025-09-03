@@ -34,7 +34,6 @@ So u don't think im bullshittin, here's what the dumper spits out.
 #include <cstdint>
 
 namespace offsets {
-    // Advanced offsets
     inline constexpr uintptr_t DataModelDeleterPointer = 0x703A760;
     inline constexpr uintptr_t DataModelToRenderView1 = 0x1D8;
     inline constexpr uintptr_t DataModelToRenderView2 = 0x8;
@@ -49,12 +48,10 @@ namespace offsets {
     inline constexpr uintptr_t VisualEngineToDataModel1 = 0x700;
     inline constexpr uintptr_t VisualEngineToDataModel2 = 0x1C0;
 
-    // Basic offsets
     // inline constexpr uintptr_t Children = 0x0; // not found - children list start
     // inline constexpr uintptr_t Name = 0x0; // not found - instance name string ptr
     inline constexpr uintptr_t Parent = 0x40;
 
-    // GUI offsets
     inline constexpr uintptr_t FramePositionOffsetX = 0x4C4;
     inline constexpr uintptr_t FramePositionOffsetY = 0x4CC;
     inline constexpr uintptr_t FramePositionX = 0x4C0;
@@ -68,7 +65,6 @@ namespace offsets {
     inline constexpr uintptr_t InsetMinY = 0x104;
     inline constexpr uintptr_t ViewportSize = 0x2F0;
 
-    // Misc offsets
     inline constexpr uintptr_t AttributeList = 0x38;
     inline constexpr uintptr_t AttributeList2 = 0x18;
     inline constexpr uintptr_t AttributeToNext = 0x58;
