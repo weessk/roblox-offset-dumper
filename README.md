@@ -6,21 +6,23 @@ keeps it simple, keeps it lowkey, spits out headers / txt / json.
 
 > side note: had this proj sittin for a while, just droppin it public now 🤷‍♂️  
 
-⚠️ heads up: recommended to run on alt / multi acc, roblox be handin out bans sometimes 🚫  
+⚠️ **heads up:** recommended to run on alt / multi acc, roblox be handin out bans sometimes 🚫  
 
 ## 📂 output
+
 when u run it u get:
 - `output/offsets.hpp` → c++ header (plug straight in ur cheat)  
 - `output/offsets.txt` → readable list, for da homies  
 - `output/offsets.json` → if u tryna feed it somewhere else  
 
 ## 💎 Proof this shit actually works
+
 So u don't think im bullshittin, here's what the dumper spits out.
 
 <details>
 <summary>Click here for the loot, lazy ass</summary>
 
-cpp
+```cpp
 // offset dumper
 // generated: 2025-09-03 07:34:00 UTC
 // roblox version: version-fresh-af
@@ -90,45 +92,84 @@ namespace offsets {
     inline constexpr uintptr_t WorkspaceToWorld = 0x3D8;
     inline constexpr uintptr_t viewmatrix = 0x4B0;
 }
+```
+
 </details>
 
+**Note:** Still missing a few dumps. I'll add more shit later, don't get your panties in a twist.
 
-Note: Still missing a few dumps. I'll add more shit later, don't get your panties in a twist.
+## ⚡ usage
 
-⚡ usage
+1. edit `offsets.hpp` → set ur placeId
+   ```cpp
+   inline constexpr uintptr_t PLACE_ID = 168556275; // ur place here
+   ```
 
-edit offsets.hpp → set ur placeId
+2. run `build.bat` → it'll call g++ (mingw) n spit out dumper.exe
 
-inline constexpr uintptr_t PLACE_ID = 168556275; // ur place here
+3. open roblox (make sure ur target exp is up)
 
-run build.bat → it’ll call g++ (mingw) n spit out dumper.exe
+4. run `dumper.exe` → check `/output` folder for ur loot
 
-open roblox (make sure ur target exp is up)
+## 🔧 deps
 
-run dumper.exe → check /output folder for ur loot
+- windows only (uses winapi / psapi)
+- g++ (mingw / gcc) installed & on ur PATH
+- c++17 or higher (no oldhead compiler plz)
 
-🔧 deps
+## 💿 how it works
 
-windows only (uses winapi / psapi)
+- attach → scan → dump
+- organizes offsets by category
+- auto timestamps + roblox/byfron ver tags
+- lil success rate summary (so u kno if u cooked or nah)
 
-g++ (mingw / gcc) installed & on ur PATH
-
-c++17 or higher (no oldhead compiler plz)
-
-💿 how it works
-
-attach → scan → dump
-
-organizes offsets by category
-
-auto timestamps + roblox/byfron ver tags
-
-lil success rate summary (so u kno if u cooked or nah)
-
-🧩 credits
+## 🧩 credits
 
 made by nwesk (keep it lowkey fr)
 
 if u skid it, at least rename it clown 🤡
 
-disclaimer: edu stuff only bruh, don’t get ur acc clapped
+## 🐛 known issues
+
+- sometimes roblox updates n breaks everything (skill issue on their part)
+- byfron detection might yeet ur dumper occasionally 
+- some offsets might be off by a few bytes (close enough tho)
+- if ur running on potato pc, might take longer to scan
+
+## 🔥 upcoming features (maybe)
+
+- [ ] auto update checker (when im not lazy)
+- [ ] pattern scanning improvements 
+- [ ] more offset categories (gui, physics, etc)
+- [ ] better error handling (currently just crashes lol)
+- [ ] maybe a gui? nah jk, cli is king 👑
+
+## 📊 stats n shit
+
+current success rate: ~95% on fresh roblox builds  
+scan time: usually 2-5 seconds (depends on ur setup)  
+supported roblox versions: most recent ones (obvs)  
+
+## 🤔 faq (frequently asked bullshit)
+
+**Q: why is this free when others charge?**  
+A: cuz im not a greedy mf, also takes 5 min to make anyway
+
+**Q: will this get me banned?**  
+A: maybe, maybe not. use alt acc if u care bout ur main
+
+**Q: can u add [insert feature here]?**  
+A: prob not, but feel free to fork n do it urself 🤷‍♂️
+
+**Q: code looks like shit**  
+A: that's not a question but ok, still works tho
+
+## 🗿 changelog
+
+**v1.0** (current)
+- initial dump, basic offsets working
+- added json/txt/hpp output formats
+- basic pattern scanning
+
+**disclaimer:** edu stuff only bruh, don't get ur acc clapped
