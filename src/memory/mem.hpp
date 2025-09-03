@@ -62,7 +62,8 @@ public:
     }
 
     BYTE* LocateModuleBase(DWORD pid, const char* modulename);
-    uintptr_t GetModuleBase(HANDLE processHandle, string& sModuleName);  // 🔥 FIXED: return type
+    uintptr_t GetModuleBase(HANDLE processHandle, string& sModuleName); 
 };
+
 
 const auto memory = std::make_unique<mem>();
