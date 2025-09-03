@@ -20,7 +20,7 @@ So u don't think im bullshittin, here's what the dumper spits out.
 <details>
 <summary>Click here for the loot, lazy ass</summary>
 
-```cpp
+cpp
 // offset dumper
 // generated: 2025-09-03 07:34:00 UTC
 // roblox version: version-fresh-af
@@ -99,13 +99,6 @@ Note: Still missing a few dumps. I'll add more shit later, don't get your pantie
 
 edit offsets.hpp → set ur placeId
 
-code
-C++
-download
-content_copy
-expand_less
-IGNORE_WHEN_COPYING_START
-IGNORE_WHEN_COPYING_END
 inline constexpr uintptr_t PLACE_ID = 168556275; // ur place here
 
 run build.bat → it’ll call g++ (mingw) n spit out dumper.exe
