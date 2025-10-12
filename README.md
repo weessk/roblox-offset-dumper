@@ -1,26 +1,20 @@
-# roblox offset dumper 🕵️‍♂️
+# roblox offset dumper
 
-yo what dis is:  
-just a lil dumper 4 roblox offsets cuz im tired of ppl sellin sum shit that takes 5 min to scan 💀  
-keeps it simple, keeps it lowkey, spits out headers / txt / json.  
+simple dumper for roblox offsets. nothing fancy, just works.
 
-> side note: had this proj sittin for a while, just droppin it public now 🤷‍♂️  
+> **heads up:** recommended to run on alt account, roblox hands out bans sometimes
 
-⚠️ **heads up:** recommended to run on alt / multi acc, roblox be handin out bans sometimes 🚫  
+## output
 
-## 📂 output
+when you run it you get:
+- `output/offsets.hpp` → c++ header (plug straight into your cheat)
+- `output/offsets.txt` → readable list
+- `output/offsets.json` → for exporting elsewhere
 
-when u run it u get:
-- `output/offsets.hpp` → c++ header (plug straight in ur cheat)  
-- `output/offsets.txt` → readable list, for da homies  
-- `output/offsets.json` → if u tryna feed it somewhere else  
-
-## 💎 Proof this shit actually works
-
-So u don't think im bullshittin, here's what the dumper spits out.
+## proof
 
 <details>
-<summary>Click here for the loot, lazy ass</summary>
+<summary>click to see the output</summary>
 
 ```cpp
 // offset dumper
@@ -92,80 +86,37 @@ namespace offsets {
 
 </details>
 
-**Note:** Still missing a few dumps. I'll add more shit later, don't get your panties in a twist.
+**note:** still missing some offsets, will add more later
 
-## ⚡ usage
+## usage
 
-1. edit `offsets.hpp` → set ur placeId
+1. edit `offsets.hpp` and set your placeId
    ```cpp
-   inline constexpr uintptr_t PLACE_ID = 168556275; // ur place here
+   inline constexpr uintptr_t PLACE_ID = 168556275; // your place here
    ```
 
-2. run `build.bat` → it'll call g++ (mingw) n spit out dumper.exe
+2. run `build.bat` to compile
 
-3. open roblox (make sure ur target exp is up)
+3. open roblox with your target experience
 
-4. run `dumper.exe` → check `/output` folder for ur loot
+4. run `dumper.exe` and check `/output` folder
 
-## 🔧 deps
+## requirements
 
-- windows only (uses winapi / psapi)
-- g++ (mingw / gcc) installed & on ur PATH
-- c++17 or higher (no oldhead compiler plz)
+- windows (uses winapi / psapi)
+- g++ (mingw / gcc) on your PATH
+- c++17 or higher
 
-## 💿 how it works
+## how it works
 
-- attach → scan → dump
-- organizes offsets by category
-- auto timestamps + roblox/byfron ver tags
-- lil success rate summary (so u kno if u cooked or nah)
+attach → scan → dump. organizes offsets by category, auto timestamps and version tags.
 
-## 🧩 credits
+## credits
 
-made by nwesk (keep it lowkey fr)
+made by nw8g
 
-if u skid it, at least rename it clown 🤡
+## known issues
 
-## 🐛 known issues
-
-- sometimes roblox updates n breaks everything (skill issue on their part)
-- byfron detection might yeet ur dumper occasionally 
-- some offsets might be off by a few bytes (close enough tho)
-- if ur running on potato pc, might take longer to scan
-
-## 🔥 upcoming features (maybe)
-
-- [ ] auto update checker (when im not lazy)
-- [ ] pattern scanning improvements 
-- [ ] more offset categories (gui, physics, etc)
-- [ ] better error handling (currently just crashes lol)
-- [ ] maybe a gui? nah jk, cli is king 👑
-
-## 📊 stats n shit
-
-current success rate: ~95% on fresh roblox builds  
-scan time: usually 2-5 seconds (depends on ur setup)  
-supported roblox versions: most recent ones (obvs)  
-
-## 🤔 faq (frequently asked bullshit)
-
-**Q: why is this free when others charge?**  
-A: cuz im not a greedy mf, also takes 5 min to make anyway
-
-**Q: will this get me banned?**  
-A: maybe, maybe not. use alt acc if u care bout ur main
-
-**Q: can u add [insert feature here]?**  
-A: prob not, but feel free to fork n do it urself 🤷‍♂️
-
-**Q: code looks like shit**  
-A: that's not a question but ok, still works tho
-
-## 🗿 changelog
-
-**v1.0** (current)
-- initial dump, basic offsets working
-- added json/txt/hpp output formats
-- basic pattern scanning
-
-**disclaimer:** edu stuff only bruh, don't get ur acc clapped
+- roblox updates can break offsets
+- byfron detection might yeet your dumper occasionally
+- some offsets might be off by a few bytes
